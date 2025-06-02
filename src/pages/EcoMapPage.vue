@@ -282,32 +282,36 @@ const rejectLocation = () => {
         <div id="map-container" class="h-full w-full rounded z-0"></div>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow space-y-4 overflow-y-auto max-h-[500px]">
-        <div class="flex justify-between items-center">
-          <h3 class="font-semibold text-lg text-darkblue">Data Jejak Karbon</h3>
-          <button @click="toggleSortOrder" :class="{
-            'bg-primaryoranye text-white hover:bg-secondaryoranye': sortOrder === 'desc',
-            'bg-semigreen text-white hover:bg-greenlight': sortOrder === 'asc'
-          }" class="px-3 py-1 text-sm rounded transition-colors duration-200">
-            {{ sortOrder === 'desc' ? 'Tertinggi' : 'Terendah' }}
-          </button>
+      <div class="bg-white rounded-lg shadow">
+        <div class="sticky top-0 z-10 bg-white p-4 border-b border-gray-200">
+          <div class="flex justify-between items-center">
+            <h3 class="font-semibold text-lg text-darkblue">Data Jejak Karbon</h3>
+            <button @click="toggleSortOrder" :class="{
+              'bg-primaryoranye text-white hover:bg-secondaryorange': sortOrder === 'desc',
+              'bg-semigreen text-white hover:bg-greenlight': sortOrder === 'asc'
+            }" class="px-3 py-1 text-sm rounded transition-colors duration-200">
+              {{ sortOrder === 'desc' ? 'Tertinggi' : 'Terendah' }}
+            </button>
+          </div>
         </div>
 
-        <div class="space-y-2">
-          <div v-for="district in sortedDistricts" :key="district.id"
-            class="p-3 border border-gray-300 rounded-lg hover:shadow-md cursor-pointer transition-colors"
-            @mouseenter="$event => map.setView([district.lat, district.lng], 10)">
-            <div class="flex justify-between items-center">
-              <span class="font-medium text-darkblue">{{ district.name }}</span>
-              <span :style="{ color: getColorByCarbon(district.carbonFootprint) }" class="font-bold">
-                {{ district.carbonFootprint.toFixed(1) }} ton
-              </span>
-            </div>
-            <div class="mt-1 text-sm flex items-center">
-              <span class="text-gray-500 mr-1">Status:</span>
-              <span :class="district.trend.color">
-                {{ district.trend.text }}
-              </span>
+        <div class="overflow-y-auto max-h-[500px] p-4">
+          <div class="space-y-2">
+            <div v-for="district in sortedDistricts" :key="district.id"
+              class="p-3 border border-gray-300 rounded-lg hover:shadow-md cursor-pointer transition-colors"
+              @mouseenter="$event => map.setView([district.lat, district.lng], 10)">
+              <div class="flex justify-between items-center">
+                <span class="font-medium text-darkblue">{{ district.name }}</span>
+                <span :style="{ color: getColorByCarbon(district.carbonFootprint) }" class="font-bold">
+                  {{ district.carbonFootprint.toFixed(1) }} ton
+                </span>
+              </div>
+              <div class="mt-1 text-sm flex items-center">
+                <span class="text-gray-500 mr-1">Status:</span>
+                <span :class="district.trend.color">
+                  {{ district.trend.text }}
+                </span>
+              </div>
             </div>
           </div>
         </div>
