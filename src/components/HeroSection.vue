@@ -1,3 +1,11 @@
+<script setup>
+const emit = defineEmits(['scrollToLatarBelakang'])
+
+const handleClick = () => {
+  emit('scrollToLatarBelakang')
+}
+</script>
+
 <template>
   <section id="hero"
     class="flex flex-col lg:flex-row md:flex-row items-center justify-center h-screen md:h-auto lg:h-screen md:mt-16 px-6 md:px-15 lg:px-24 py-27 md:py-10 gap-4 lg:gap-0 md:gap-0">
@@ -10,7 +18,7 @@
         Pahami dan kelola jejak karbon dengan peta interaktif dan gamifikasi.
         Dukung aksi nyata untuk SDGs, aksi iklim, kota berkelanjutan, konsumsi bertanggung jawab, dan inovasi.
       </p>
-      <button
+      <button @click="handleClick"
         class="w-3/5 lg:w-2/5 bg-primaryoranye text-white mt-1 py-2 rounded-full hover:bg-secondaryoranye cursor-pointer">selengkapnya</button>
     </div>
     <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2 lg:-mt-20 lg:pl-20 md:-mt-5 md:pl-20">
