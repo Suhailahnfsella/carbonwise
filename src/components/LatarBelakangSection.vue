@@ -8,50 +8,65 @@
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
-      <div
-        class="bg-white p-4 rounded-xl shadow flex flex-col items-center gap-2 text-center group transition-colors duration-300 hover:text-darkblue">
-        <img src="./icons/climate.png" alt=""
-          class="w-14 bg-primaryblue p-2 rounded-full transition-colors duration-300 group-hover:bg-darkblue" />
-        <h6 class="font-semibold text-primaryblue transition-colors duration-300 group-hover:text-darkblue">
-          Climate Action
+      <div v-for="(item, index) in latarList" :key="index"
+        class="bg-white p-4 rounded-xl shadow flex flex-col items-center gap-2 text-center group transition-colors duration-300 hover:text-[var(--hover-text)]"
+        :style="{ '--hover-text': item.hoverTextColor }">
+        <img :src="item.icon" alt="" class="w-14 p-2 rounded-full transition-colors duration-300"
+          :class="[item.bgColor, 'group-hover:' + item.hoverBgColor]" />
+        <h6 class="font-semibold transition-colors duration-300"
+          :class="[item.textColor, 'group-hover:' + item.hoverTextColor]">
+          {{ item.title }}
         </h6>
         <p class="text-sm text-gray-500">
-          Mengatasi perubahan iklim melalui pengurangan emisi dan adaptasi terhadap dampaknya.
-        </p>
-      </div>
-      <div
-        class="bg-white p-4 rounded-xl shadow flex flex-col items-center gap-2 text-center group transition-colors duration-300 hover:text-primaryblue">
-        <img src="./icons/building.png" alt=""
-          class="w-14 bg-secondaryblue p-2 rounded-full transition-colors duration-300 group-hover:bg-primaryblue" />
-        <h6 class="font-semibold text-secondaryblue transition-colors duration-300 group-hover:text-primaryblue">
-          Sustainable Cities and Communities
-        </h6>
-        <p class="text-sm text-gray-500">
-          Mendorong pembangunan kota dan komunitas yang inklusif, aman, tahan bencana, dan ramah lingkungan.
-        </p>
-      </div>
-      <div
-        class="bg-white p-4 rounded-xl shadow flex flex-col items-center gap-2 text-center group transition-colors duration-300 hover:text-semigreen">
-        <img src="./icons/consume.png" alt=""
-          class="w-14 bg-greenlight p-2 rounded-full transition-colors duration-300 group-hover:bg-semigreen" />
-        <h6 class="font-semibold text-greenlight transition-colors duration-300 group-hover:text-semigreen">
-          Responsible Consumption
-        </h6>
-        <p class="text-sm text-gray-500">
-          Mengupayakan pola konsumsi dan produksi efisien yang berkelanjutan untuk pertahanan sumber daya.
-        </p>
-      </div>
-      <div
-        class="bg-white p-4 rounded-xl shadow flex flex-col items-center gap-2 text-center group transition-colors duration-300 hover:text-primaryoranye">
-        <img src="./icons/inovate.png" alt=""
-          class="w-14 bg-secondaryoranye p-2 rounded-full transition-colors duration-300 group-hover:bg-primaryoranye" />
-        <h6 class="font-semibold text-secondaryoranye transition-colors duration-300 group-hover:text-primaryoranye">
-          Innovation and Infrastructure
-        </h6>
-        <p class="text-sm text-gray-500">
-          Memperkuat infrastruktur dan inovasi untuk mendukung pertumbuhan ekonomi yang berkelanjutan dan inklusif.
+          {{ item.description }}
         </p>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import climateIcon from '@/components/icons/climate.png'
+import buildingIcon from '@/components/icons/building.png'
+import consumeIcon from '@/components/icons/consume.png'
+import innovateIcon from '@/components/icons/inovate.png'
+
+const latarList = [
+  {
+    title: 'Climate Action',
+    description: 'Mengatasi perubahan iklim melalui pengurangan emisi dan adaptasi terhadap dampaknya.',
+    icon: climateIcon,
+    bgColor: 'bg-primaryblue',
+    hoverBgColor: 'bg-darkblue',
+    textColor: 'text-primaryblue',
+    hoverTextColor: 'text-darkblue',
+  },
+  {
+    title: 'Sustainable Cities and Communities',
+    description: 'Mendorong pembangunan kota dan komunitas yang inklusif, aman, tahan bencana, dan ramah lingkungan.',
+    icon: buildingIcon,
+    bgColor: 'bg-secondaryblue',
+    hoverBgColor: 'bg-primaryblue',
+    textColor: 'text-secondaryblue',
+    hoverTextColor: 'text-primaryblue',
+  },
+  {
+    title: 'Responsible Consumption',
+    description: 'Mengupayakan pola konsumsi dan produksi efisien yang berkelanjutan untuk pertahanan sumber daya.',
+    icon: consumeIcon,
+    bgColor: 'bg-greenlight',
+    hoverBgColor: 'bg-semigreen',
+    textColor: 'text-greenlight',
+    hoverTextColor: 'text-semigreen',
+  },
+  {
+    title: 'Innovation and Infrastructure',
+    description: 'Memperkuat infrastruktur dan inovasi untuk mendukung pertumbuhan ekonomi yang berkelanjutan dan inklusif.',
+    icon: innovateIcon,
+    bgColor: 'bg-secondaryoranye',
+    hoverBgColor: 'bg-primaryoranye',
+    textColor: 'text-secondaryoranye',
+    hoverTextColor: 'text-primaryoranye',
+  },
+]
+</script>

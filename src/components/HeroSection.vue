@@ -17,5 +17,4 @@
       <img src="./img/carbonwise.png" alt="" class="w-56 md:w-68 lg:w-110 lg:h-110" />
     </div>
   </section>
-
 </template>
