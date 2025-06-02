@@ -185,7 +185,7 @@ const verifyRegisterCode = () => {
   errors.value.reset.code = ''
 
   resetStep.value = null
-  showNotification('Akun berhasil dibuat! Silakan masuk.')
+  showNotification('Akun berhasil dibuat! Silahkan masuk.')
   emit('update:mode', 'login')
 
   form.value.fullName = ''
@@ -433,9 +433,11 @@ onBeforeUnmount(() => {
         </div>
       </template>
     </div>
-    <div v-if="notification.show"
-      :class="{ 'bg-green-600': notification.type === 'success', 'bg-red-600': notification.type === 'error' }"
-      class="fixed top-10 left-1/3 transform -translate-x-1/2 px-6 py-3 rounded text-white z-50 shadow-lg">
+    <div v-if="notification.show" :class="[
+      'fixed top-6 left-4 sm:left-6 md:left-10 lg:left-16 xl:left-20',
+      'px-4 py-3 rounded text-white z-50 shadow-lg max-w-xs sm:max-w-sm md:max-w-md',
+      notification.type === 'success' ? 'bg-green-600' : 'bg-red-600'
+    ]">
       {{ notification.message }}
     </div>
   </div>
