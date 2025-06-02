@@ -287,8 +287,7 @@ onBeforeUnmount(() => {
   <div class="fixed inset-0 flex items-center justify-center z-50"
     :style="{ backgroundColor: `rgba(0, 0, 0, ${props.overlayOpacity})` }">
     <div ref="modalRef"
-      class="bg-white p-6 rounded-xl shadow-md w-90 md:w-[400px] lg:w-[500px] max-h-[90vh] overflow-auto">
-
+      class="bg-white p-6 rounded-xl mx-5 shadow-md w-90 md:w-[400px] lg:w-[500px] max-h-[90vh] overflow-auto">
       <template v-if="resetStep === 'email'">
         <h2 class="text-xl font-bold mb-4 text-center text-darkblue">Reset Password</h2>
         <input type="email" placeholder="Masukkan email" v-model="resetEmail" @input="errors.reset.email = ''"
