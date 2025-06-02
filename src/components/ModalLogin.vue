@@ -121,7 +121,7 @@ const login = () => {
 
   emit('close')
   showNotification('Berhasil masuk ke akun!')
-  router.push({ path: '/dashboard/ecomap' })
+  router.push({ path: '/ecomap' })
 }
 
 const register = () => {
