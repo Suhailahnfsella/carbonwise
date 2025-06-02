@@ -5,7 +5,7 @@
       <div v-for="(item, index) in faqList" :key="index" class="border-b border-gray-200 pb-2">
         <button @click="toggleFAQ(index)"
           class="w-full flex justify-between items-center text-left font-semibold py-2 focus:outline-none"
-          :class="activeFAQ === index ? 'text-darkblue' : 'text-gray-500'">
+          :class="activeFAQ === index ? 'text-darkblue' : 'text-gray-400'">
           <span>{{ item.title }}</span>
           <span class="flex items-center">
             <svg v-if="activeFAQ === index" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none"
