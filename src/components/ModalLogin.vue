@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps, ref, onMounted, onBeforeUnmount, defineEmits, watch } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const showPassword = ref(false)
 
@@ -118,6 +121,7 @@ const login = () => {
 
   emit('close')
   showNotification('Berhasil masuk ke akun!')
+  router.push({ path: '/dashboard/ecomap' })
 }
 
 const register = () => {
