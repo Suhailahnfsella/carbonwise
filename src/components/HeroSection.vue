@@ -1,6 +1,6 @@
 <template>
   <section id="hero"
-    class="flex flex-col lg:flex-row md:flex-row items-center h-screen md:h-auto lg:h-screen md:mt-16 px-6 md:px-15 lg:px-24 py-27 md:py-10 gap-4 lg:gap-0 md:gap-0">
+    class="flex flex-col lg:flex-row md:flex-row items-center justify-center h-screen md:h-auto lg:h-screen md:mt-16 px-6 md:px-15 lg:px-24 py-27 md:py-10 gap-4 lg:gap-0 md:gap-0">
     <div class="w-full lg:w-1/2 flex flex-col justify-center gap-3 order-2 lg:order-1 md:order-1">
       <div class="flex flex-col gap-1 lg:gap-2 md:gap-1">
         <h1 class="text-4xl lg:text-5xl font-extrabold text-darkblue">Kelola Karbon,</h1>
