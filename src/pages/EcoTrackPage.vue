@@ -417,7 +417,7 @@ onMounted(() => {
         Peta ini menampilkan akumulasi jejak karbon di wilayah Anda.
         Titik merah menunjukkan lokasi dengan jejak karbon tinggi.
       </p>
-      <div id="map-container" class="w-full border border-gray-200 rounded-lg h-96"></div>
+      <div id="map-container" class="w-full border border-gray-200 rounded-lg h-96 z-0"></div>
     </div>
   </DashboardLayout>
 </template>
