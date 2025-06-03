@@ -323,12 +323,12 @@ onMounted(() => {
       <div v-if="timeConverter.showCalculator" class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div class="p-4 border border-gray-200 rounded-lg">
           <label class="block mb-2 text-sm font-medium text-gray-700">Jam ke Menit</label>
-          <div class="flex">
+          <div class="flex flex-col sm:flex-row">
             <input v-model="timeConverter.hours" @input="convertHoursToMinutes" type="number" min="0" step="0.1"
-              class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full px-3 py-2 border border-gray-300 rounded-t-md sm:rounded-tr-none sm:rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Masukkan jam">
             <span
-              class="flex items-center px-3 text-gray-500 bg-gray-100 border-t border-b border-r border-gray-300 rounded-r-md">
+              class="w-full px-3 py-2 text-gray-500 bg-gray-100 border-t border-b border-r border-gray-300 rounded-b-md sm:rounded-bl-none sm:rounded-r-md text-center sm:text-left">
               jam = {{ timeConverter.minutes || 0 }} menit
             </span>
           </div>
@@ -336,12 +336,12 @@ onMounted(() => {
 
         <div class="p-4 border border-gray-200 rounded-lg">
           <label class="block mb-2 text-sm font-medium text-gray-700">Menit ke Jam</label>
-          <div class="flex">
+          <div class="flex flex-col sm:flex-row">
             <input v-model="timeConverter.minutes" @input="convertMinutesToHours" type="number" min="0"
-              class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full px-3 py-2 border border-gray-300 rounded-t-md sm:rounded-tr-none sm:rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Masukkan menit">
             <span
-              class="flex items-center px-3 text-gray-500 bg-gray-100 border-t border-b border-r border-gray-300 rounded-r-md">
+              class="w-full px-3 py-2 text-gray-500 bg-gray-100 border-t border-b border-r border-gray-300 rounded-b-md sm:rounded-bl-none sm:rounded-r-md text-center sm:text-left">
               menit = {{ timeConverter.hours || 0 }} jam
             </span>
           </div>
