@@ -340,7 +340,7 @@ const logout = () => {
                 </div>
 
                 <div class="flex justify-center gap-2 mb-4">
-                  <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="text" maxlength="1"
+                  <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="number" maxlength="1"
                     v-model="verificationCode[index]" @input="handleCodeInput(index)"
                     @keydown.backspace.prevent="handleBackspace(index, $event)"
                     class="w-10 h-12 text-center text-lg border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primaryblue"

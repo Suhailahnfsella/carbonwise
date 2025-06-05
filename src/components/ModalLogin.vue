@@ -304,7 +304,7 @@ onBeforeUnmount(() => {
       <template v-else-if="resetStep === 'code'">
         <h2 class="text-xl font-bold mb-4 text-center text-darkblue">Masukkan Kode Verifikasi</h2>
         <div class="flex justify-center gap-2 mb-2">
-          <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="text" maxlength="1"
+          <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="number" maxlength="1"
             class="w-10 h-12 text-center text-lg text-gray-700 border border-gray-400 rounded-lg focus:border-gray-700 outline-none"
             v-model="code[index]" @input="handleCodeInput(index)"
             @keydown.backspace.prevent="handleBackspace(index, $event)" />
@@ -348,7 +348,7 @@ onBeforeUnmount(() => {
         <h2 class="text-xl font-bold mb-2 text-center text-darkblue">Verifikasi Registrasi</h2>
         <p class="text-gray-800 mb-2">Kode verifikasi sudah dikirim ke email: <strong>{{ resetEmail }}</strong></p>
         <div class="flex justify-center gap-2 mb-2">
-          <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="text" maxlength="1"
+          <input v-for="(digit, index) in 6" :key="index" ref="codeInputs" type="number" maxlength="1"
             class="w-10 h-12 text-center text-lg text-gray-700 border border-gray-400 rounded-lg focus:border-gray-700 outline-none"
             v-model="code[index]" @input="handleCodeInput(index)"
             @keydown.backspace.prevent="handleBackspace(index, $event)" />
