@@ -15,7 +15,7 @@ const completeChallenge = () => {
 }
 
 const getBadgeSVG = (badge, color, stroke) => {
-  switch(badge) {
+  switch (badge) {
     case 'carbon-reducer':
       return `
         <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +132,7 @@ const getBadgeSVG = (badge, color, stroke) => {
         props.challenge.completed
           ? 'bg-greenlight/10 text-greenlight cursor-default'
           : props.challenge.progress === 100
-            ? 'bg-greenlight text-white hover:bg-semigreen cursor-pointer'
+            ? 'bg-greenlight text-white hover:bg-greenlight/80 cursor-pointer'
             : 'bg-gray-100 text-gray-600 cursor-not-allowed'
       ]" :disabled="props.challenge.progress !== 100 || props.challenge.completed">
         {{

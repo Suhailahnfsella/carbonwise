@@ -23,7 +23,7 @@ const challenges = ref([
     duration: "30 hari",
     participants: 89,
     badge: "eco-warrior",
-    progress: 25,
+    progress: 100,
     completed: false,
     badgeColor: "#8BC34A",
     badgeStroke: "#689F38"
@@ -35,7 +35,7 @@ const challenges = ref([
     duration: "14 hari",
     participants: 178,
     badge: "plastic-free",
-    progress: 40,
+    progress: 60,
     completed: false,
     badgeColor: "#009688",
     badgeStroke: "#00796B"
@@ -47,7 +47,7 @@ const challenges = ref([
     duration: "3 hari",
     participants: 312,
     badge: "beginner-eco",
-    progress: 0,
+    progress: 25,
     completed: false,
     badgeColor: "#FFC107",
     badgeStroke: "#FFA000"
@@ -168,7 +168,10 @@ const getBadgeSVG = (badge, color, stroke) => {
     </template>
 
     <template #description>
-      Selesaikan tantangan lingkungan dan dapatkan EcoBadge!
+      <h3 class="text-xl font-semibold text-primaryblue mt-1 mb-1">Tantangan Selamatkan Bumi</h3>
+      <p class="text-sm">
+        <b>Selesaikan tantangan harian/mingguan</b> dan kumpulkan poin untuk mendapatkan EcoBadge.
+      </p>
     </template>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -189,7 +192,7 @@ const getBadgeSVG = (badge, color, stroke) => {
             <p class="text-sm text-gray-600 mb-2">Anda mendapatkan {{ newlyEarnedBadge.title }}</p>
             <div class="flex space-x-2">
               <a href="/ecobadge"
-                class="text-xs bg-primaryblue text-white px-3 py-1 rounded hover:bg-secondaryblue transition-colors">
+                class="text-xs bg-darkblue text-white px-3 py-1 rounded hover:bg-primaryblue transition-colors">
                 Lihat di EcoBadge
               </a>
               <button @click="showBadgeNotification = false"
