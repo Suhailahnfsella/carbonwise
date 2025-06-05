@@ -147,8 +147,17 @@ const openDetail = (badge) => {
   showDetailModal.value = true
 }
 
+const notification = ref({ show: false, message: '', type: 'success' })
+
+const showNotification = (msg, type = 'success') => {
+  notification.value = { show: true, message: msg, type }
+  setTimeout(() => {
+    notification.value.show = false
+  }, 3000)
+}
+
 const shareBadge = (badge) => {
-  alert(`Membagikan badge ${badge.title} ke media sosial!`)
+  showNotification(`Diibaratkan ini pop up untuk membagikan badge ${badge.title} ke media sosial!`)
 }
 </script>
 
@@ -208,6 +217,13 @@ const shareBadge = (badge) => {
           </svg>
         </RouterLink>
       </div>
+    </div>
+
+    <div v-if="notification.show" :class="[
+      'fixed top-4 right-4 px-4 py-3 rounded text-white z-80 shadow-lg max-w-xs',
+      notification.type === 'success' ? 'bg-green-600' : 'bg-red-600'
+    ]">
+      {{ notification.message }}
     </div>
 
     <EcoBadgeDetail v-if="showDetailModal" :badge="selectedBadge" @close="showDetailModal = false"

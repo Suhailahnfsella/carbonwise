@@ -115,7 +115,7 @@ const getBadgeSVG = (badge) => {
     <div class="w-full max-h-[calc(100vh-2rem)] flex items-center justify-center">
       <div
         class="bg-white rounded-xl shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl overflow-hidden mx-auto my-auto max-h-[90vh] flex flex-col">
-        <div class="bg-primaryblue p-4 text-white flex-shrink-0">
+        <div class="bg-white shadow-md p-4 text-darkblue flex-shrink-0">
           <h3 class="text-xl font-semibold">Detail EcoBadge</h3>
         </div>
 
@@ -136,7 +136,7 @@ const getBadgeSVG = (badge) => {
 
           <div class="flex gap-3">
             <button @click="downloadCertificate"
-              class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primaryoranye text-white rounded-md hover:bg-secondaryoranye transition-colors flex items-center justify-center">
+              class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primaryoranye text-white rounded-md hover:bg-primaryoranye/80 transition-colors flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -146,7 +146,7 @@ const getBadgeSVG = (badge) => {
             </button>
 
             <button @click="emit('share')" v-if="badge.earned"
-              class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primaryblue text-white rounded-md hover:bg-primaryblue/80 transition-colors flex items-center justify-center">
+              class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-secondaryoranye text-white rounded-md hover:bg-secondaryoranye/80 transition-colors flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -157,11 +157,10 @@ const getBadgeSVG = (badge) => {
           </div>
         </div>
 
-        <!-- Footer dengan tombol (tetap di bawah) -->
         <div
           class="border-t border-gray-200 px-4 sm:px-6 py-2 sm:py-3 bg-gray-50 flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center flex-shrink-0">
           <button @click="emit('close')"
-            class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base text-gray-600 hover:text-gray-800 rounded-md border border-gray-300 transition-colors flex items-center justify-center">
+            class="cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base text-darkblue/80 hover:text-darkblue rounded-md border border-darkblue/80 hover:border-darkblue transition-colors flex items-center justify-center">
             Tutup
           </button>
         </div>

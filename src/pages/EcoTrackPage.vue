@@ -377,7 +377,7 @@ onMounted(() => {
 
     <div class="flex justify-center my-8">
       <button @click="calculateFootprint"
-        class="px-8 py-3 text-lg font-medium text-white transition-colors bg-secondaryoranye rounded-lg shadow-md hover:bg-primaryoranye">
+        class="px-8 py-3 text-lg font-medium text-white transition-colors bg-primaryoranye rounded-lg shadow-md hover:bg-primaryoranye">
         Hitung Jejak Karbon Saya
       </button>
     </div>

@@ -86,12 +86,12 @@ const getBadgeSVG = (badge, color, stroke) => {
       class="bg-secondaryblue text-white text-xs font-bold px-3 py-1 text-center">
       DALAM PROGRES
     </div>
-    <div v-else class="bg-gray-200 text-gray-700 text-xs font-bold px-3 py-1 text-center">
+    <div v-else class="bg-gray-200 text-darkblue text-xs font-bold px-3 py-1 text-center">
       BELUM DIMULAI
     </div>
 
     <div class="p-5 flex-grow flex flex-col">
-      <h3 class="font-semibold text-lg mb-2 text-gray-800">{{ props.challenge.title }}</h3>
+      <h3 class="font-semibold text-lg mb-2 text-darkblue">{{ props.challenge.title }}</h3>
       <p class="text-gray-600 text-sm mb-4 flex-grow">{{ props.challenge.description }}</p>
 
       <div class="flex justify-between items-center text-xs text-gray-500 mb-3">

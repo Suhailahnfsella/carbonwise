@@ -267,12 +267,13 @@ const rejectLocation = () => {
 
     <div v-if="showLocationPrompt" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
       <div class="bg-white p-6 rounded-xl max-w-md mx-6">
-        <h3 class="text-lg text-darkblue font-semibold mb-2">Izin Lokasi</h3>
+        <h3 class="text-lg text-primaryoranye font-semibold mb-2">Izin Lokasi</h3>
         <p class="mb-4 text-gray-700">Izinkan akses lokasi untuk pengalaman lebih baik</p>
         <div class="flex justify-end space-x-3">
           <button @click="rejectLocation"
-            class="px-4 py-2 border border-gray-800 text-gray-800 rounded-lg">Nanti</button>
-          <button @click="acceptLocation" class="px-4 py-2 bg-primaryblue text-white rounded-lg">Izinkan</button>
+            class="px-4 py-2 border border-primaryoranye hover:border-primaryoranye/80 text-primaryoranye hover:text-primaryoranye/80 cursor-pointer rounded-lg">Nanti</button>
+          <button @click="acceptLocation"
+            class="px-4 py-2 bg-primaryoranye hover:bg-secondaryoranye text-white rounded-lg">Izinkan</button>
         </div>
       </div>
     </div>

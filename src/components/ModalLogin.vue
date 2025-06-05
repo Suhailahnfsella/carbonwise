@@ -108,11 +108,9 @@ const login = () => {
   errors.value.login.general = ''
 
   if (!validateEmailFormat(email)) {
-    errors.value.login.email = 'Format email tidak valid.'
-  }
-
-  if (!validatePassword(password)) {
-    errors.value.login.password = 'Password harus minimal 8 karakter dan mengandung huruf serta angka.'
+    errors.value.login.email = 'Email tidak ditemukan!'
+  } else if (!validatePassword(password)) {
+    errors.value.login.password = 'Password salah!'
   }
 
   if (errors.value.login.email || errors.value.login.password) {
