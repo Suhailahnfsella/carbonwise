@@ -14,8 +14,8 @@
 
         <div v-if="showQuantity">
           <input v-model="modelValue[item.type]" type="number" min="0"
-            class="input-field p-2 outline-none focus:border focus:border-gray-500 rounded-xl" :placeholder="unit"
-            @input="$emit('update', category, item.type, $event.target.valueAsNumber)">
+            class="input-field max-w-3/4 p-2 outline-none focus:border focus:border-gray-500 rounded-xl"
+            :placeholder="unit" @input="$emit('update', category, item.type, $event.target.valueAsNumber)">
         </div>
         <div v-else>
           <label class="inline-flex items-center">
