@@ -46,11 +46,12 @@
           <router-link to="/fitur" :class="[
             'hover:text-primaryoranye',
             route.path === '/fitur' ? 'text-primaryoranye' : 'text-darkblue'
-          ]" @click="isOpen = false">Fitur</router-link>
+          ]" @click="isOpen = false">Fitur Unggulan</router-link>
         </li>
         <li>
-          <button @click="openLogin"
-            class="text-primaryoranye hover:text-secondaryoranye bg-transparent border-none p-0 cursor-pointer">
+          <button @click="openLogin" class="bg-white text-primaryoranye border border-primaryoranye px-4 py-1 rounded-full
+            hover:text-white hover:bg-primaryoranye
+            transition duration-300 cursor-pointer">
             Login
           </button>
         </li>

@@ -7,6 +7,7 @@
         <LatarBelakang />
       </div>
       <TujuanSection />
+      <ResponsiveDemoSection />
       <FooterSection />
     </main>
   </div>
@@ -18,6 +19,7 @@ import Navbar from '../components/Navbar.vue'
 import HeroSection from '../components/HeroSection.vue'
 import LatarBelakang from '../components/LatarBelakangSection.vue'
 import TujuanSection from '../components/FaqSection.vue'
+import ResponsiveDemoSection from '../components/ResponsiveDemoSection.vue'
 import FooterSection from '../components/FooterSection.vue'
 
 const latarBelakangRef = ref(null)
