@@ -1,35 +1,9 @@
-# carbonwise
+# 🌱 CarbonWise
 
-This template should help get you started developing with Vue 3 in Vite.
+[![Vercel Deployment](https://img.shields.io/badge/Live%20Demo-carbonwise.vercel.app-00C896?style=for-the-badge&logo=vercel&logoColor=white)](https://carbonwise.vercel.app/)
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+**CarbonWise** adalah platform berbasis web yang memungkinkan masyarakat Indonesia, khususnya di Jawa Timur, untuk:
+- 🌍 Melacak jejak karbon pribadi dan wilayah secara **harian berbasis geospasial**.
+- 📍 Melihat dampak aktivitasnya secara **lokal**.
+- 🤝 Ikut serta dalam aksi iklim.
+- 🤖 Mendapat prediksi iklim melalui analisis berbasis **kecerdasan buatan (AI)**.
