@@ -37,7 +37,7 @@ import { ref } from 'vue'
 const faqList = [
   {
     title: 'Apa itu CarbonWise?',
-    content: 'CarbonWise adalah platform berbasis web yang memungkinkan masyarakat Indonesia khususnya Jawa Timur untuk melacak jejak karbon pribadi secara harian, melihat dampak aktivitasnya secara lokal, dan ikut serta dalam aksi iklim berbasis komunitas serta teknologi.'
+    content: 'CarbonWise adalah platform berbasis web yang memungkinkan masyarakat Indonesia khususnya Jawa Timur untuk melacak jejak karbon pribadi secara harian, melihat dampak aktivitasnya secara lokal, dan ikut serta dalam aksi iklim serta teknologi.'
   },
   {
     title: 'Bagaimana cara platform ini menghitung jejak karbon saya?',
@@ -60,7 +60,7 @@ const faqList = [
   },
   {
     title: 'Apakah CarbonWise bisa digunakan secara gratis?',
-    content: 'Ya, platform ini gratis untuk semua individu dan komunitas yang ingin berkontribusi dalam aksi iklim secara sadar dan terukur.'
+    content: 'Ya, platform ini gratis untuk semua individu maupun komunitas yang ingin berkontribusi dalam aksi iklim secara sadar dan terukur.'
   },
   {
     title: 'Bagaimana CarbonWise menjaga keamanan data saya?',

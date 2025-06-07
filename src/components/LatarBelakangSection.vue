@@ -43,7 +43,7 @@ const latarList = [
   },
   {
     title: 'Sustainable Cities and Communities',
-    description: 'Mendorong pembangunan kota dan komunitas yang inklusif, aman, tahan bencana, dan ramah lingkungan.',
+    description: 'Mendorong pembangunan kota yang inklusif, aman, tahan bencana, dan ramah lingkungan.',
     icon: buildingIcon,
     bgColor: 'bg-secondaryblue',
     hoverBgColor: 'bg-primaryblue',
