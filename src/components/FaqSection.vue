@@ -4,7 +4,7 @@
     <div class="space-y-4">
       <div v-for="(item, index) in faqList" :key="index" class="border-b border-gray-200 pb-2">
         <button @click="toggleFAQ(index)"
-          class="w-full flex justify-between items-center text-left font-semibold py-2 focus:outline-none"
+          class="w-full flex justify-between items-center text-left font-semibold py-2 focus:outline-none cursor-pointer"
           :class="activeFAQ === index ? 'text-darkblue' : 'text-gray-400'">
           <span>{{ item.title }}</span>
           <span class="flex items-center">

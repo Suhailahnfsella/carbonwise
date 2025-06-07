@@ -271,9 +271,9 @@ const rejectLocation = () => {
         <p class="mb-4 text-gray-700">Izinkan akses lokasi untuk pengalaman lebih baik</p>
         <div class="flex justify-end space-x-3">
           <button @click="rejectLocation"
-            class="px-4 py-2 border border-primaryoranye hover:border-primaryoranye/80 text-primaryoranye hover:text-primaryoranye/80 cursor-pointer rounded-lg">Nanti</button>
+            class="px-4 py-2 border border-primaryoranye hover:border-primaryoranye/80 text-primaryoranye hover:text-primaryoranye/80 cursor-pointer rounded-lg cursor-pointer">Nanti</button>
           <button @click="acceptLocation"
-            class="px-4 py-2 bg-primaryoranye hover:bg-secondaryoranye text-white rounded-lg">Izinkan</button>
+            class="px-4 py-2 bg-primaryoranye hover:bg-secondaryoranye text-white rounded-lg cursor-pointer">Izinkan</button>
         </div>
       </div>
     </div>
@@ -290,7 +290,7 @@ const rejectLocation = () => {
             <button @click="toggleSortOrder" :class="{
               'bg-primaryoranye text-white hover:bg-secondaryorange': sortOrder === 'desc',
               'bg-semigreen text-white hover:bg-greenlight': sortOrder === 'asc'
-            }" class="px-3 py-1 text-sm rounded transition-colors duration-200">
+            }" class="px-3 py-1 text-sm rounded transition-colors duration-200 cursor-pointer">
               {{ sortOrder === 'desc' ? 'Tertinggi' : 'Terendah' }}
             </button>
           </div>

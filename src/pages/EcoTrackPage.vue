@@ -315,7 +315,7 @@ onMounted(() => {
     <div class="p-4 mb-6 bg-white rounded-lg shadow">
       <div class="flex items-center justify-between mb-3">
         <h3 class="text-lg font-medium text-darkblue">Konversi Waktu</h3>
-        <button @click="toggleTimeConverter" class="text-sm text-darkblue hover:text-primaryblue">
+        <button @click="toggleTimeConverter" class="text-sm text-darkblue hover:text-primaryblue cursor-pointer">
           {{ timeConverter.showCalculator ? 'Sembunyikan' : 'Tampilkan' }} Kalkulator
         </button>
       </div>
@@ -377,7 +377,7 @@ onMounted(() => {
 
     <div class="flex justify-center my-8">
       <button @click="calculateFootprint"
-        class="px-8 py-3 text-lg font-medium text-white transition-colors bg-primaryoranye rounded-lg shadow-md hover:bg-primaryoranye">
+        class="px-8 py-3 text-lg font-medium text-white transition-colors bg-primaryoranye rounded-lg shadow-md hover:bg-primaryoranye cursor-pointer">
         Hitung Jejak Karbon Saya
       </button>
     </div>
@@ -397,11 +397,12 @@ onMounted(() => {
           userLocation.lng.toFixed(4) }}</span>
       </p>
       <div class="flex justify-end space-x-3">
-        <button @click="showConfirmation = false" class="px-4 py-2 text-white bg-gray-400 rounded-lg hover:bg-gray-300">
+        <button @click="showConfirmation = false"
+          class="px-4 py-2 text-white bg-gray-400 rounded-lg hover:bg-gray-300 cursor-pointer">
           Batal
         </button>
         <button @click="submitToEcoMap"
-          class="px-4 py-2 text-white bg-primaryoranye rounded-lg hover:bg-secondaryoranye">
+          class="px-4 py-2 text-white bg-primaryoranye rounded-lg hover:bg-secondaryoranye cursor-pointer">
           Konfirmasi & Kirim
         </button>
       </div>

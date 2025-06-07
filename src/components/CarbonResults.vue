@@ -2,7 +2,8 @@
   <div class="bg-white p-6 rounded-lg shadow-lg">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-xl font-semibold text-gray-800">Hasil Jejak Karbon Anda</h2>
-      <button @click="$emit('get-location')" class="flex items-center text-sm text-primaryblue hover:text-darkblue">
+      <button @click="$emit('get-location')"
+        class="flex items-center text-sm text-primaryblue hover:text-darkblue cursor-pointer">
         <MapPinIcon class="h-4 w-4 md:mr-1" /> Ambil Lokasi
       </button>
     </div>

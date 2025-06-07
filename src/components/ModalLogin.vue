@@ -296,7 +296,7 @@ onBeforeUnmount(() => {
           class="w-full mb-2 px-3 py-2 text-gray-700 border border-gray-300 rounded-lg focus:border-gray-700 outline-none" />
         <p v-if="errors.reset.email" class="text-red-500 text-sm">{{ errors.reset.email }}</p>
         <button @click="submitResetEmail"
-          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition">
+          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition cursor-pointer">
           Kirim Kode Verifikasi
         </button>
       </template>
@@ -311,7 +311,7 @@ onBeforeUnmount(() => {
         </div>
         <p v-if="errors.reset.code" class="text-red-500 text-sm text-center">{{ errors.reset.code }}</p>
         <button @click="verifyCode"
-          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition">
+          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition cursor-pointer">
           Verifikasi
         </button>
       </template>
@@ -339,7 +339,7 @@ onBeforeUnmount(() => {
         </div>
         <p v-if="errors.reset.password" class="text-red-500 text-sm">{{ errors.reset.password }}</p>
         <button @click="saveNewPassword"
-          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition">
+          class="w-full bg-primaryoranye text-white rounded-lg mt-2 py-2 hover:bg-secondaryoranye transition cursor-pointer">
           Simpan
         </button>
       </template>
@@ -387,17 +387,18 @@ onBeforeUnmount(() => {
         <p v-if="errors.login.password" class="text-red-500 text-sm mb-2">{{ errors.login.password }}</p>
         <p v-if="errors.login.general" class="text-red-500 text-sm mb-2">{{ errors.login.general }}</p>
         <div class="text-right mb-2">
-          <button @click="forgotPassword" class="text-sm text-secondaryoranye hover:text-primaryoranye">
+          <button @click="forgotPassword" class="text-sm text-secondaryoranye hover:text-primaryoranye cursor-pointer">
             Lupa password?
           </button>
         </div>
         <button @click="login"
-          class="w-full mb-1 bg-primaryoranye text-white rounded-lg py-2 hover:bg-secondaryoranye transition">
+          class="w-full mb-1 bg-primaryoranye text-white rounded-lg py-2 hover:bg-secondaryoranye transition cursor-pointer">
           Masuk
         </button>
         <div class="flex justify-center mt-4 gap-2 text-darkblue">
           <span>Belum punya akun?</span>
-          <button @click="$emit('update:mode', 'register')" class="text-primaryoranye hover:text-secondaryoranye">
+          <button @click="$emit('update:mode', 'register')"
+            class="text-primaryoranye hover:text-secondaryoranye cursor-pointer">
             Register
           </button>
         </div>
@@ -424,12 +425,13 @@ onBeforeUnmount(() => {
         </select>
         <p v-if="errors.register.occupation" class="text-red-600 text-sm mb-2">{{ errors.register.occupation }}</p>
         <button @click="register"
-          class="w-full bg-primaryoranye text-white rounded-lg py-2 hover:bg-secondaryoranye transition">
+          class="w-full bg-primaryoranye text-white rounded-lg py-2 hover:bg-secondaryoranye transition cursor-pointer">
           Daftar
         </button>
         <div class="flex justify-center mt-4 gap-2">
           <span>Sudah punya akun?</span>
-          <button @click="$emit('update:mode', 'login')" class="text-primaryoranye hover:text-secondaryoranye">
+          <button @click="$emit('update:mode', 'login')"
+            class="text-primaryoranye hover:text-secondaryoranye cursor-pointer">
             Masuk
           </button>
         </div>

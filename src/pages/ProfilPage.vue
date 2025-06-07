@@ -215,11 +215,12 @@ const logout = () => {
 
         <div class="flex space-x-4 pt-4">
           <button @click="openEditModal"
-            class="px-4 py-2 bg-darkblue text-white rounded-md hover:bg-primaryblue transition-colors">
+            class="px-4 py-2 bg-darkblue text-white rounded-md hover:bg-primaryblue transition-colors cursor-pointer">
             Edit Profil
           </button>
 
-          <button @click="logout" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors">
+          <button @click="logout"
+            class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors cursor-pointer">
             Logout
           </button>
         </div>
@@ -349,7 +350,8 @@ const logout = () => {
                 <p v-if="errors.verification" class="text-red-500 text-sm text-center">{{ errors.verification }}</p>
 
                 <div class="text-center text-sm text-gray-500 mt-2">
-                  <p>Tidak menerima kode? <button type="button" class="text-primaryblue hover:underline">Kirim
+                  <p>Tidak menerima kode? <button type="button"
+                      class="text-primaryblue hover:underline cursor-pointer">Kirim
                       ulang</button></p>
                 </div>
               </template>
@@ -383,10 +385,11 @@ const logout = () => {
 
               <div class="flex justify-end space-x-3 pt-4">
                 <button v-if="editStep !== 'form'" type="button" @click="editStep = 'form'"
-                  class="px-4 py-2 border border-secondaryoranye rounded-md text-secondaryoranye hover:bg-gray-50">
+                  class="px-4 py-2 border border-secondaryoranye rounded-md text-secondaryoranye hover:bg-gray-50 cursor-pointer">
                   Kembali
                 </button>
-                <button type="submit" class="px-4 py-2 bg-primaryoranye text-white rounded-md hover:bg-secondaryoranye">
+                <button type="submit"
+                  class="px-4 py-2 bg-primaryoranye text-white rounded-md hover:bg-secondaryoranye cursor-pointer">
                   {{
                     editStep === 'form' ? 'Lanjutkan' :
                       editStep === 'emailCode' ? 'Verifikasi' :

@@ -196,7 +196,7 @@ const getBadgeSVG = (badge, color, stroke) => {
                 Lihat di EcoBadge
               </a>
               <button @click="showBadgeNotification = false"
-                class="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded hover:bg-gray-200 transition-colors">
+                class="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded hover:bg-gray-200 transition-colors cursor-pointer">
                 Tutup
               </button>
             </div>

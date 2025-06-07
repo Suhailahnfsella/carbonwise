@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="fixed top-4 left-4 z-50 lg:hidden flex flex-col items-start space-y-2">
-      <button @click="toggleSidebar" class="p-2 bg-white rounded shadow" aria-label="Toggle sidebar">
+      <button @click="toggleSidebar" class="p-2 bg-white rounded shadow cursor-pointer" aria-label="Toggle sidebar">
         <svg v-if="!sidebarOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-darkblue" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -16,7 +16,7 @@
     <aside :class="[
       'fixed top-0 left-0 h-screen bg-white shadow-xl px-6 md:px-8 py-18 md:py-20 lg:py-8 space-y-6 transition-transform duration-300 ease-in-out z-40',
       sidebarOpen ? 'translate-x-0' : '-translate-x-full',
-      'lg:fixed lg:h-screen lg:translate-x-0 lg:w-60'  // Perubahan di sini
+      'lg:fixed lg:h-screen lg:translate-x-0 lg:w-60'
     ]">
       <div class="flex items-center space-x-1">
         <img src="/carbonwise.png" alt="CarbonWise Logo" class="h-10 w-10 object-contain" />

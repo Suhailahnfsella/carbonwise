@@ -19,7 +19,7 @@
         </div>
         <div v-else>
           <label class="inline-flex items-center">
-            <input v-model="modelValue[item.type]" type="checkbox" class="rounded text-green-500"
+            <input v-model="modelValue[item.type]" type="checkbox" class="rounded text-green-500 cursor-pointer"
               @change="$emit('update', category, item.type, $event.target.checked)">
             <span class="ml-2 text-sm">{{ item.question }}</span>
           </label>
